@@ -65,9 +65,9 @@ module.exports = {
     // options below to some value.
     //
     development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 8545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
+      host: "127.0.0.1",     // Localhost (default: none)
+      port: 8545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
     },
     //
     // An additional network, but with some advanced options…
@@ -100,7 +100,12 @@ module.exports = {
 
   // Set default mocha options here, use special reporters, etc.
   mocha: {
-    // timeout: 100000
+    reporter: 'eth-gas-reporter',
+    reporterOptions: {
+      gasPrice: 1,
+      token: 'ETH',
+      showTimeSpent: true,
+    }
   },
 
   // Configure your compilers

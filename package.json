@@ -3,5 +3,8 @@
     "@openzeppelin/contracts": "^4.7.3",
     "@openzeppelin/test-helpers": "^0.5.16",
     "chai": "^4.3.6"
+  },
+  "devDependencies": {
+    "eth-gas-reporter": "^0.2.25"
   }
 }
